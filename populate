@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cp .bash_aliases ~
+cp .bash_profile ~
+cp .bashrc ~
+cp .gitconfig ~
+cp .profile ~
+cp .vimrc ~
+
+source ~/.bash_profile
+
