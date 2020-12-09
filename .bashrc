@@ -92,7 +92,7 @@ fi
 unset use_color safe_term match_lhs sh
 
 #Add bash aliases
-if [-f ~/.bash_aliases]; then
+if [ -f ~/.bash_aliases ]; then
 	source ~/.bash_aliases
 fi
 
