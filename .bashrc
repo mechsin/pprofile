@@ -139,3 +139,14 @@ function ex ()
 
 export -f ex
 
+function ttrailing ()
+{
+  if [ -f $1 ] ; then
+    sed -i 's/[ \t]*$//' "$1"
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+export -f ttrailing
+
