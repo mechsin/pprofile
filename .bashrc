@@ -31,6 +31,9 @@ colors() {
 	done
 }
 
+# Source git prompt for use at the commandline
+source ~/.git-prompt.sh
+
 # Enable bash completion features
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
@@ -73,7 +76,9 @@ if ${use_color} ; then
 	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
 	else
-		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+		# This is my personal PS1
+	        PS1="\e[32m\u@\h \e[35m\t \e[1;96m\w\e[m\e[38;5;82m\$(__git_ps1)\e[m \n$ "
+		#PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
 	fi
 
 	alias ls='ls --color=auto'
