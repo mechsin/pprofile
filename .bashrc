@@ -113,10 +113,9 @@ shopt -s expand_aliases
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
-#
 # # ex - archive extractor
 # # usage: ex <file>
-ex ()
+function ex ()
 {
   if [ -f $1 ] ; then
     case $1 in
@@ -137,3 +136,6 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+export -f ex
+
