@@ -1,8 +1,8 @@
 
 # Add some ls aliases
-alias ll='ls -lF --color=auto'
-alias la='ls -aF --color=auto'
-alias ls='ls -F'
+alias ls='ls -F --color=auto'
+alias ll='ls -l'
+alias la='ls -a'
 
 # Some other aliases
 alias df='df -h'                          # human-readable sizes
