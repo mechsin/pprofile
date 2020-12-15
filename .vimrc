@@ -8,6 +8,8 @@ set number
 set nowrap
 " Turn on syntax highlighting
 syntax on
+" Set auto indent
+set autoindent
 
 " Move lines up and down using leader j and k
 noremap <leader>j ddp
@@ -51,3 +53,4 @@ iabbrev myemail menyland@gmail.com
 
 " add abbreviation to fix common mispelling teh 
 iabbrev teh the
+
