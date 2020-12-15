@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cp ~/.bash_profile .
+cp ~/.profile .
+cp ~/.bashrc .
+cp ~/.bash_aliases .
+cp ~/.vimrc .
+cp ~/.gitconfig .
+cp ~/.git-prompt.sh .
