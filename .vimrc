@@ -24,24 +24,24 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " Add single quotes to everything after = sign
 nnoremap <leader>' F=wi'<esc>'<esc>g_a'<esc>
 
-" Add single quote before and after the selected 
-" visual text 
+" Add single quote before and after the selected
+" visual text
 vnoremap <leader>' <esc>`<i'<esc>`>ea'<esc>
 
 " Remap H and L to move to the beginning and end of the line
 nnoremap H 0
 nnoremap L $
 
-" Remap Esc to qj 
-inoremap qj <esc> 
-" If your having trouble with a remap just disable the 
+" Remap Esc to qj
+inoremap qj <esc>
+" If your having trouble with a remap just disable the
 " old one with the below line. This line makes the escape
 " key a nop.
 " inoremap <esc> <nop>
 
 " The below were all added as part of the VIM scripting class
 
-" Makes current word case. One map for insert mode and the other for normal mode 
+" Makes current word case. One map for insert mode and the other for normal mode
 inoremap <leader><c-u> <esc>viwUA
 nnoremap <leader><c-u> viwU
 
@@ -51,6 +51,6 @@ iabbrev myname Christopher Nyland
 " add abbreivation for my email
 iabbrev myemail menyland@gmail.com
 
-" add abbreviation to fix common mispelling teh 
+" add abbreviation to fix common mispelling teh
 iabbrev teh the
 
