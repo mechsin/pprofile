@@ -4,6 +4,11 @@ alias ls='ls -F --color=auto'
 alias ll='ls -l'
 alias la='ls -a'
 
+# grep aliases
+alias grep='grep --colour=auto'
+alias egrep='grep -E'
+alias fgrep='grep -F'
+
 # Some other aliases
 alias df='df -h'                          # human-readable sizes
 alias df='df -h'                          # human-readable sizes
