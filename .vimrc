@@ -39,7 +39,8 @@ inoremap qj <esc>
 " key a nop.
 " inoremap <esc> <nop>
 
-" The below were all added as part of the VIM scripting class
+" Command to trim trailing whitespace
+nnoremap <leader>tt :%s/\s\+$//e<cr>
 
 " Makes current word case. One map for insert mode and the other for normal mode
 inoremap <leader><c-u> <esc>viwUA
