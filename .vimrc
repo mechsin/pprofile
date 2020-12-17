@@ -39,6 +39,22 @@ inoremap qj <esc>
 " key a nop.
 " inoremap <esc> <nop>
 
+augroup MyGroup
+
+	" Clear the autocmds of the current group so the
+	" don't get piled up if the vimrc is reloaded
+	autocmd!
+
+	" Add autocmd to remove trailing white space
+	" This effects all file so it might be bad sometimes
+	" For instances this will mess up editing git hunks
+	" autocmd BufWritePre <buffer> %s/\s\+$//e
+
+	" Execute Python files with leader p
+	autocmd FileType *.py nnoremap <leader>p terminal python %:p
+
+augroup END
+
 " Command to trim trailing whitespace
 nnoremap <leader>tt :%s/\s\+$//e<cr>
 
