@@ -19,3 +19,6 @@ alias more=less
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp="cp -i"                          # confirm before overwriting something
+
+# Add a trim trailing alias
+alias tt="sed -i 's/[ \t]*$//'"
