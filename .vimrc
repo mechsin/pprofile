@@ -10,6 +10,8 @@ set nowrap
 syntax on
 " Set auto indent
 set autoindent
+" Set spell checking on
+set spell spelllang=en_us
 
 " Move lines up and down using leader j and k
 noremap <leader>j ddp
