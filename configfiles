@@ -1,0 +1,42 @@
+#!/bin/bash
+
+input="./filelist"
+
+function put() {
+	cp "$1" ~
+}
+
+function get() {
+	cp ~/"$1" .
+}
+
+function remove() {
+	rm -f ~/"$1"
+}
+
+
+case $1 in
+
+	put)
+		echo put
+		method=put
+	;;
+	get)
+		echo get
+		method=get
+	;;
+	remove)
+		echo remove
+		method=remove
+	;;
+	*)
+		echo "get put and remove are the only valid pass values"
+		exit 0
+	;;
+esac
+
+
+while IFS= read -r line
+do
+	$method $line
+done < "$input"
