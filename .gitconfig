@@ -3,3 +3,6 @@
 	name = Christopher Nyland
 [core]
 	editor = vim
+[credential "https://github.com"]
+	username = mechsin
+	helper = store
