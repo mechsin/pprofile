@@ -1,0 +1,11 @@
+# This is a rule to direct the Arduino Uno board that I have to ttyUSB100
+# The rule itself works but the REGEX inside of the Arduino IDE 
+# is to restrictive and doesn't show the port 
+# but I am leave the rule any way because at least it provides
+# and easy way for me to find the board. 
+# The link to the Java file in the Arduino IDE is below if you ever feel inclined
+# to submit a request 
+# https://github.com/arduino/Arduino/blob/1.6.8/arduino-core/src/processing/app/SerialPortList.java#L50
+
+# This file needs to be place in the /etc/udev/rules.d folder
+ACTION=="add", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", SYMLINK+="ttyUSB100"
