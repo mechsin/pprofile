@@ -8,4 +8,4 @@
 # https://github.com/arduino/Arduino/blob/1.6.8/arduino-core/src/processing/app/SerialPortList.java#L50
 
 # This file needs to be place in the /etc/udev/rules.d folder
-ACTION=="add", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", SYMLINK+="ttyUSB100"
+ACTION=="add", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", SYMLINK+="arduino-uno"
