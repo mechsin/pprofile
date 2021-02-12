@@ -138,3 +138,4 @@ function ex ()
   fi
 }
 
+export EDITOR=vim
