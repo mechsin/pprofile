@@ -12,6 +12,9 @@ syntax on
 set autoindent
 " Set spell checking on
 set spell spelllang=en_us
+" Tab settings
+set shiftwidth=4
+set softtabstop=4
 
 " Move lines up and down using leader j and k
 noremap <leader>j ddp
@@ -53,7 +56,8 @@ augroup MyGroup
 	" autocmd BufWritePre <buffer> %s/\s\+$//e
 
 	" Execute Python files with leader p
-	autocmd FileType *.py nnoremap <leader>p terminal python %:p
+	autocmd FileType python nnoremap <leader>p terminal python %:p
+	autocmd FileType python setlocal expandtab
 
 augroup END
 
