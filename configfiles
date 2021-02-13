@@ -3,14 +3,17 @@
 input="./filelist"
 
 function put() {
+	echo "Copying $1"
 	cp "$1" ~
 }
 
 function get() {
+	echo "Grabbing $1 from home"
 	cp ~/"$1" .
 }
 
 function remove() {
+	echo "Removing ~/$1"
 	rm -f ~/"$1"
 }
 
@@ -18,15 +21,12 @@ function remove() {
 case $1 in
 
 	put)
-		echo put
 		method=put
 	;;
 	get)
-		echo get
 		method=get
 	;;
 	remove)
-		echo remove
 		method=remove
 	;;
 	*)
