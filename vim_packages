@@ -1,0 +1,19 @@
+#!/bin/bash
+
+function check_and_clone() {
+    # Check to see if the directory exists if
+    # not clone the project to that folder
+    if [[ ! -d $1 ]]
+    then
+        git clone $2 $1
+    fi
+}
+
+# Create package directory if it doesn't exist
+packDir="$HOME/.vim/pack/plugins/start"
+mkdir --verbose --parent --  $packDir
+
+
+# Check to see if the following packages have been installed and
+# if not download them
+check_and_clone $packDir/indentLine https://github.com/Yggdroot/indentLine.git
