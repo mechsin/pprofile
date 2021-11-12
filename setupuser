@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+    then
+	echo "A user name must be supplied"
+	exit 1
+fi
+
+username="$1"
+
+useradd -m -g users -G sudo $username
+
+passwd $username
+
+scriptdir=$(realpath $(dirname $0))
+expath=$scriptdir/configfiles
+
+sudo -u $username bash $expath put
