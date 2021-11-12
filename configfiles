@@ -1,10 +1,12 @@
 #!/bin/bash
 
-input="./filelist"
+here=$(dirname $0)
+
+input="$here/filelist"
 
 function put() {
         echo "Copying $1"
-        cp "$1" ~
+        cp "$here/$1" ~
 }
 
 function get() {
