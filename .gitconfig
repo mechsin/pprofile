@@ -6,3 +6,5 @@
 [credential "https://github.com"]
 	username = mechsin
 	helper = store
+[init]
+	defaultBranch = main
