@@ -16,6 +16,10 @@ set spell spelllang=en_us
 set shiftwidth=4
 set softtabstop=4
 
+" Set line break on so that when wrap
+" is the line breaks at a word
+set linebreak
+
 " Move lines up and down using leader j and k
 noremap <leader>j ddp
 noremap <leader>k ddkP
