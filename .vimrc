@@ -52,6 +52,9 @@ inoremap qj <esc>
 " key a nop.
 " inoremap <esc> <nop>
 
+" Map shift tab to decrement tab
+inoremap <S-Tab> <C-d>
+
 augroup MyGroup
 
 	" Clear the autocmds of the current group so the
