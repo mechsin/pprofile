@@ -15,9 +15,11 @@ set spell spelllang=en_us
 " Tab settings
 set shiftwidth=4
 set softtabstop=4
-
-" Set line break on so that when wrap
-" is the line breaks at a word
+set expandtab
+" Set status line to always show
+set laststatus=2
+" Set linebreak on so that when wrap is on
+" the break happens at a word
 set linebreak
 
 " Move lines up and down using leader j and k
@@ -62,6 +64,9 @@ augroup MyGroup
 	" Execute Python files with leader p
 	autocmd FileType python nnoremap <leader>p terminal python %:p
 	autocmd FileType python setlocal expandtab
+
+	" Set Rules for make files
+	autocmd FileType make setlocal tabstop=4 softtabstop=0 noexpandtab
 
 augroup END
 
