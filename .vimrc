@@ -21,6 +21,8 @@ set laststatus=2
 " Set linebreak on so that when wrap is on
 " the break happens at a word
 set linebreak
+" Set 80 column color line
+set colorcolumn=80
 
 " Move lines up and down using leader j and k
 noremap <leader>j ddp
