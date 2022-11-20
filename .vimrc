@@ -75,6 +75,29 @@ augroup MyGroup
 
 augroup END
 
+" The below function and group are copied mostly from the below URL on stack
+" overflow https://vi.stackexchange.com/a/35172
+" The function and group edit the highlighting for the spelling module.
+" I makes it so that incorrect words are underlined and the color is
+" change rather than coloring them with a background color.
+" I really want only the underline to be colored differently but apparently
+" that is a relatively new feature so check back on that in the future.
+function! MyHighlights() abort
+    hi clear SpellBad
+    hi SpellBad cterm=underline ctermfg=197
+    hi clear SpellLocal
+    hi SpellLocal cterm=underline ctermfg=197
+endfunction
+
+augroup MyColors
+
+    autocmd!
+    autocmd ColorScheme * call MyHighlights()
+
+augroup END
+
+autocmd vimenter * ++nested colorscheme default
+
 " Command to trim trailing whitespace
 nnoremap <leader>tt :%s/\s\+$//e<cr>
 
