@@ -1,19 +1,47 @@
 #!/bin/bash
 
-function check_and_clone() {
-    # Check to see if the directory exists if
-    # not clone the project to that folder
-    if [[ ! -d $1 ]]
+function installvimpackage() {
+    # Install Vim package based on URL that is passed
+    # as the first argument.
+
+    # Setup variables URL the name of the package
+    # and the install directory
+    url=$1
+    name=`echo $url | awk -F'[/\\\\.]' '{print $(NF-1)}'`
+    packagedir=$packdir/$name
+
+    # Give some screen feed back to let the user
+    # know what is going on
+    echo "Install package ${name}"
+    echo "from URL: ${url}"
+    echo "to package directory: $packagedir"
+
+    # Check if the package directory exists
+    # if now then install the package by cloning
+    # the URL to the given folder.
+    if [[ ! -d $packagedir ]]
     then
-        git clone $2 $1
+        git clone $url $packagedir
     fi
+
+
+    # Add the help docuementation to the Vim help
+    vim -u NONE -c "helptags $packagedir/doc" -c "q"
+
+    # Add empty line to separate output text
+    echo ""
 }
 
 # Create package directory if it doesn't exist
-packDir="$HOME/.vim/pack/plugins/start"
-mkdir --verbose --parent --  $packDir
+packdir="$HOME/.vim/pack/plugins/start"
+echo "Installing packages to $packdir"
+mkdir --verbose --parent --  $packdir
+echo ""
 
-
-# Check to see if the following packages have been installed and
-# if not download them
-check_and_clone $packDir/indentLine https://github.com/Yggdroot/indentLine.git
+urls=(
+"https://github.com/Yggdroot/indentLine.git"
+"https://tpope.io/vim/commentary.git"
+)
+for url in ${urls[@]}; do
+    installvimpackage $url
+done
