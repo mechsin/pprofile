@@ -74,6 +74,10 @@ augroup MyGroup
 	" Set Rules for make files
 	autocmd FileType make setlocal tabstop=4 softtabstop=0 noexpandtab
 
+	" Set rules for vim files
+	autocmd FileType vim setlocal noexpandtab
+	autocmd FileType vim setlocal commentstring=\"\ %s
+
 augroup END
 
 " The below function and group are copied mostly from the below URL on stack
