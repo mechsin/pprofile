@@ -13,12 +13,13 @@ set autoindent
 " Set spell checking on
 set spell spelllang=en_us
 " Tab settings
+set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 " Set status line to always show
 set laststatus=2
-" Set linebreak on so that when wrap is on
+" Set line break on so that when wrap is on
 " the break happens at a word
 set linebreak
 " Set 80 column color line
@@ -52,7 +53,7 @@ inoremap qj <esc>
 " key a nop.
 " inoremap <esc> <nop>
 
-" Map shift tab to decrement tab
+" Map shift tab to decrements tab
 inoremap <S-Tab> <C-d>
 
 augroup MyGroup
@@ -98,19 +99,19 @@ augroup END
 
 autocmd vimenter * ++nested colorscheme default
 
-" Command to trim trailing whitespace
+" Command to trim trailing white space
 nnoremap <leader>tt :%s/\s\+$//e<cr>
 
 " Makes current word case. One map for insert mode and the other for normal mode
 inoremap <leader><c-u> <esc>viwUA
 nnoremap <leader><c-u> viwU
 
-" Add abbreivation for my name
+" Add abbreviation for my name
 iabbrev myname Christopher Nyland
 
-" add abbreivation for my email
+" add abbreviation for my email
 iabbrev myemail menyland@gmail.com
 
-" add abbreviation to fix common mispelling teh
+" add abbreviation to fix common misspelling teh
 iabbrev teh the
 
