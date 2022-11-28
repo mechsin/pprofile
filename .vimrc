@@ -62,14 +62,14 @@ augroup MyGroup
 	" don't get piled up if the vimrc is reloaded
 	autocmd!
 
+	" Autocmds for Python
 	" Add autocmd to remove trailing white space
-	" This effects all file so it might be bad sometimes
-	" For instances this will mess up editing git hunks
-	" autocmd BufWritePre <buffer> %s/\s\+$//e
+	autocmd FileType python autocmd BufWritePre <buffer> %s/\s\+$//e
 
 	" Execute Python files with leader p
 	autocmd FileType python nnoremap <leader>p terminal python %:p
 	autocmd FileType python setlocal expandtab
+	autocmd FileType python setlocal commentstring=#\ %s
 
 	" Set Rules for make files
 	autocmd FileType make setlocal tabstop=4 softtabstop=0 noexpandtab
