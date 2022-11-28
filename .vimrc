@@ -78,6 +78,9 @@ augroup MyGroup
 	autocmd FileType vim setlocal noexpandtab
 	autocmd FileType vim setlocal commentstring=\"\ %s
 
+	" Set rules for bash files
+	autocmd FileType sh setlocal commentstring=#\ %s
+
 augroup END
 
 " The below function and group are copied mostly from the below URL on stack
