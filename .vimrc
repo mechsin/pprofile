@@ -19,7 +19,7 @@ set softtabstop=4
 set expandtab
 " Set status line to always show
 set laststatus=2
-" Set line break on so that when wrap is on
+" Set linebreak on so that when wrap is on
 " the break happens at a word
 set linebreak
 " Set 80 column color line
@@ -53,7 +53,7 @@ inoremap qj <esc>
 " key a nop.
 " inoremap <esc> <nop>
 
-" Map shift tab to decrements tab
+" Map shift tab to decrement tab
 inoremap <S-Tab> <C-d>
 
 augroup MyGroup
@@ -101,24 +101,24 @@ augroup MyColors
 
     autocmd!
     autocmd ColorScheme * call MyHighlights()
+    autocmd VimEnter * nested colorscheme default
 
 augroup END
 
-autocmd vimenter * ++nested colorscheme default
 
-" Command to trim trailing white space
+" Command to trim trailing whitespace
 nnoremap <leader>tt :%s/\s\+$//e<cr>
 
 " Makes current word case. One map for insert mode and the other for normal mode
 inoremap <leader><c-u> <esc>viwUA
 nnoremap <leader><c-u> viwU
 
-" Add abbreviation for my name
+" Add abbreivation for my name
 iabbrev myname Christopher Nyland
 
-" add abbreviation for my email
+" add abbreivation for my email
 iabbrev myemail menyland@gmail.com
 
-" add abbreviation to fix common misspelling teh
+" add abbreviation to fix common mispelling teh
 iabbrev teh the
 
