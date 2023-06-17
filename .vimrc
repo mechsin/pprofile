@@ -13,7 +13,6 @@ set autoindent
 " Set spell checking on
 set spell spelllang=en_us
 " Tab settings
-set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
